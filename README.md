@@ -2,4 +2,4 @@
 
 how to run:
 
-artillery run -e prod my.yml
+npm run artillery:run

@@ -1,0 +1,23 @@
+{
+  "name": "artillery-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "artillery:run": "rm -R reports/*; artillery run -o reports/report.txt -e prod my.yml; artillery report reports/report.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mflorlorenzo/artillery-tests.git"
+  },
+  "keywords": [
+    "performance",
+    "testing"
+  ],
+  "author": "mflorenzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mflorlorenzo/artillery-tests/issues"
+  },
+  "homepage": "https://github.com/mflorlorenzo/artillery-tests#readme"
+}

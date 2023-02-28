@@ -1,0 +1,22 @@
+config:
+  target: "https://catfact.ninja/fact"
+  environments:
+      prod:
+        target: "https://catfact.ninja/fact"
+  phases:
+      - duration: 100
+        arrivalRate: 5
+        maxVusers: 20
+        name: test_1
+  plugins:
+    expect: { }
+scenarios:
+  - name: "First test"
+    flow:
+      - get:
+          url: "/"
+    expect:
+      - statusCode: 200
+      - contentType: json
+      - equals:
+        - respMessage: "OK"
